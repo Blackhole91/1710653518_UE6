@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class ArrayAuslesen {
 
-   static int []array = new int[100];
+    static int []array = new int[100];
     static int a;
     static  int b;
 
@@ -17,8 +17,6 @@ public class ArrayAuslesen {
            int zufall = random.nextInt((10) + 1);
 
            array[i] = zufall;
-           array[a] = b;
-
             }
 
 
@@ -26,15 +24,13 @@ public class ArrayAuslesen {
        System.out.println("--------------");
 
 
-
-
     }
     public static void auslesen(){
 
-        boolean zahl = false;
+        boolean keineZahl = false;
         try {
 
-            while (!zahl){
+            while (!keineZahl){
                 a = Integer.parseInt(JOptionPane.showInputDialog("Welche stelle wollen Sie ansehen"));
                 JOptionPane.showMessageDialog(null,"der Wert an Stelle "+a+" lautet "+array[a-1]);
                 String jaNein = JOptionPane.showInputDialog(null,"Wollen sie den Wert an der Stelle "+a+" ändern? dann geben sie ja ein");
@@ -45,13 +41,13 @@ public class ArrayAuslesen {
                 }
                 else {
                     JOptionPane.showMessageDialog(null,"Okey dann nicht");
-                    zahl = true;
+                    keineZahl = true;
                 }
             }
 
         }catch (Exception e){
             JOptionPane.showMessageDialog(null, "Keine Zahl");
-            zahl = true;
+            keineZahl = true;
 
             for(int g: array){
                 System.out.println(g);
